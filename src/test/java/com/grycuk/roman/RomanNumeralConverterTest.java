@@ -34,4 +34,9 @@ class RomanNumeralConverterTest {
     void shouldConvert4ToIV() {
         assertThat(romanNumeralConverter.convert(4)).isEqualTo("IV");
     }
+
+    @Test
+    void shouldConvert5ToV() {
+        assertThat(romanNumeralConverter.convert(5)).isEqualTo("V");
+    }
 }
