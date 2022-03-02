@@ -3,6 +3,7 @@ package com.grycuk.roman;
 public class RomanNumeralConverter {
 
     enum NumToRoman {
+        ONE_HUNDRED(100, "C"),
         NINETY(90, "XC"),
         FIFTY(50, "L"),
         FORTY(40, "XL"),
