@@ -26,7 +26,7 @@ public class RomanNumeralConverter {
     }
 
     public String convert(int number) {
-        if (number > 3000) {
+        if (number < 1 || number > 3000) {
             throw new IllegalArgumentException();
         }
         StringBuilder sb = new StringBuilder();
