@@ -26,6 +26,9 @@ public class RomanNumeralConverter {
     }
 
     public String convert(int number) {
+        if (number > 3000) {
+            throw new IllegalArgumentException();
+        }
         StringBuilder sb = new StringBuilder();
         for (NumToRoman numToRomanNumeral : NumToRoman.values()) {
             while (number >= numToRomanNumeral.num) {
