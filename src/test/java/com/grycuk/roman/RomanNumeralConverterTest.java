@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class RomanNumeralConverterTest {
 
@@ -92,5 +93,11 @@ class RomanNumeralConverterTest {
     @Test
     void shouldConvert3000ToMMM() {
         assertThat(romanNumeralConverter.convert(3000)).isEqualTo("MMM");
+    }
+
+    @Test
+    void shouldThrowErrorIfInputIsGreaterThan3000() {
+        assertThatThrownBy(() -> romanNumeralConverter.convert(3001))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }
