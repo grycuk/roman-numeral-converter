@@ -24,7 +24,6 @@ class RomanNumeralConverterTest {
         assertThat(romanNumeralConverter.convert(2)).isEqualTo("II");
     }
 
-
     @Test
     void shouldConvert3ToIII() {
         assertThat(romanNumeralConverter.convert(3)).isEqualTo("III");
@@ -73,5 +72,10 @@ class RomanNumeralConverterTest {
     @Test
     void shouldConvert100ToC() {
         assertThat(romanNumeralConverter.convert(100)).isEqualTo("C");
+    }
+
+    @Test
+    void shouldConvert400ToCD() {
+        assertThat(romanNumeralConverter.convert(400)).isEqualTo("CD");
     }
 }
