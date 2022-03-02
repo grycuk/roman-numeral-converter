@@ -4,6 +4,7 @@ public class RomanNumeralConverter {
 
     enum NumToRoman {
         ONE_THOUSAND(1000, "M"),
+        NINE_HUNDRED(900, "CM"),
         FIVE_HUNDRED(500, "D"),
         FOUR_HUNDRED(400, "CD"),
         ONE_HUNDRED(100, "C"),

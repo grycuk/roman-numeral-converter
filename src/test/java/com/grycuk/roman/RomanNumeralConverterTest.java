@@ -106,4 +106,19 @@ class RomanNumeralConverterTest {
         assertThatThrownBy(() -> romanNumeralConverter.convert(0))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    void shouldConvert2022ToMMXXII() {
+        assertThat(romanNumeralConverter.convert(2022)).isEqualTo("MMXXII");
+    }
+
+    @Test
+    void shouldConvert1980ToMCMLXXX() {
+        assertThat(romanNumeralConverter.convert(1980)).isEqualTo("MCMLXXX");
+    }
+
+    @Test
+    void shouldConvert900ToCM() {
+        assertThat(romanNumeralConverter.convert(900)).isEqualTo("CM");
+    }
 }
