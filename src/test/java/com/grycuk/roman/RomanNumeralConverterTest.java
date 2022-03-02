@@ -44,4 +44,9 @@ class RomanNumeralConverterTest {
     void shouldConvert6ToVI() {
         assertThat(romanNumeralConverter.convert(6)).isEqualTo("VI");
     }
+
+    @Test
+    void shouldConvert9ToIX() {
+        assertThat(romanNumeralConverter.convert(9)).isEqualTo("IX");
+    }
 }
