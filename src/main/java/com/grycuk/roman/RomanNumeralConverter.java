@@ -1,26 +1,30 @@
 package com.grycuk.roman;
 
-import java.util.stream.IntStream;
-
 public class RomanNumeralConverter {
 
-    public String convert(int i) {
+    enum NumToRoman {
+        NINE(9, "IX"),
+        FIVE(5, "V"),
+        FOUR(4, "IV"),
+        ONE(1, "I");
+
+        private final int num;
+        private final String roman;
+
+        NumToRoman(int num, String roman) {
+            this.num = num;
+            this.roman = roman;
+        }
+    }
+
+    public String convert(int number) {
         StringBuilder sb = new StringBuilder();
-
-        if (i >= 9) {
-            sb.append("IX");
-            i -= 9;
+        for (NumToRoman numToRomanNumeral : NumToRoman.values()) {
+            while (number >= numToRomanNumeral.num) {
+                sb.append(numToRomanNumeral.roman);
+                number -= numToRomanNumeral.num;
+            }
         }
-        if (i >= 5) {
-            sb.append("V");
-            i -= 5;
-        }
-        if (i >= 4) {
-            sb.append("IV");
-            i -= 4;
-        }
-
-        IntStream.range(0, i).forEach(num -> sb.append("I"));
         return sb.toString();
     }
 }
