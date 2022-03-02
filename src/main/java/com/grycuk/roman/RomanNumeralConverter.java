@@ -3,6 +3,8 @@ package com.grycuk.roman;
 public class RomanNumeralConverter {
 
     enum NumToRoman {
+        FORTY(40, "XL"),
+        TEN(10, "X"),
         NINE(9, "IX"),
         FIVE(5, "V"),
         FOUR(4, "IV"),

@@ -54,4 +54,9 @@ class RomanNumeralConverterTest {
     void shouldConvert40ToXL() {
         assertThat(romanNumeralConverter.convert(40)).isEqualTo("XL");
     }
+
+    @Test
+    void shouldConvert10ToX() {
+        assertThat(romanNumeralConverter.convert(10)).isEqualTo("X");
+    }
 }
