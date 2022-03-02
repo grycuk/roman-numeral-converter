@@ -7,6 +7,10 @@ public class RomanNumeralConverter {
     public String convert(int i) {
         StringBuilder sb = new StringBuilder();
 
+        if (i >= 9) {
+            sb.append("IX");
+            i -= 9;
+        }
         if (i >= 5) {
             sb.append("V");
             i -= 5;
