@@ -88,4 +88,9 @@ class RomanNumeralConverterTest {
     void shouldConvert1000ToM() {
         assertThat(romanNumeralConverter.convert(1000)).isEqualTo("M");
     }
+
+    @Test
+    void shouldConvert3000ToMMM() {
+        assertThat(romanNumeralConverter.convert(3000)).isEqualTo("MMM");
+    }
 }
