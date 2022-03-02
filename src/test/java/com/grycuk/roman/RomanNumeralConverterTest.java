@@ -78,4 +78,9 @@ class RomanNumeralConverterTest {
     void shouldConvert400ToCD() {
         assertThat(romanNumeralConverter.convert(400)).isEqualTo("CD");
     }
+
+    @Test
+    void shouldConvert500ToD() {
+        assertThat(romanNumeralConverter.convert(500)).isEqualTo("D");
+    }
 }
