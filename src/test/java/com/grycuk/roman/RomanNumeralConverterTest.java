@@ -23,4 +23,10 @@ class RomanNumeralConverterTest {
     void shouldConvert2ToII() {
         assertThat(romanNumeralConverter.convert(2)).isEqualTo("II");
     }
+
+
+    @Test
+    void shouldConvert3ToIII() {
+        assertThat(romanNumeralConverter.convert(3)).isEqualTo("III");
+    }
 }
