@@ -83,4 +83,9 @@ class RomanNumeralConverterTest {
     void shouldConvert500ToD() {
         assertThat(romanNumeralConverter.convert(500)).isEqualTo("D");
     }
+
+    @Test
+    void shouldConvert1000ToM() {
+        assertThat(romanNumeralConverter.convert(1000)).isEqualTo("M");
+    }
 }
