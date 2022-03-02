@@ -100,4 +100,10 @@ class RomanNumeralConverterTest {
         assertThatThrownBy(() -> romanNumeralConverter.convert(3001))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    void shouldThrowErrorIfInputIsLessThan1() {
+        assertThatThrownBy(() -> romanNumeralConverter.convert(0))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
 }
